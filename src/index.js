@@ -19,7 +19,10 @@ function Watch() {
     {id: 6, t: 'Dark'},
     {id: 7, t: 'Anne with an e'},
     {id: 8, t: 'Squid game'},
-    {id: 9, t: 'The 100'}
+    {id: 9, t: 'The 100'},
+    {id: 10, t: 'The 100'},
+    {id: 11, t: 'The 100'}
+
   ];
   return (
     <>
