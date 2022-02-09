@@ -1,35 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-
-function Todo(props) {
-  return <li input type="checkbox"> { props.t }</li>;
+function List(props) {
+  return <li>{ props.task }</li>;
 }
 
-function Watch() {
+function Task() {
   const tasks = [
-    {id: 1, t: 'You'},
-    {id: 2, t: 'Breaking Bad'},
-    {id: 3, t: 'Prison Break'},
-    {id: 4, t: 'Emily in Paris'},
-    {id: 5, t: 'Finding Ola'},
-    {id: 6, t: 'Dark'},
-    {id: 7, t: 'Anne with an e'},
-    {id: 8, t: 'Squid game'},
-    {id: 9, t: 'The 100'}
+    {id: 1, task: 'Wake up at 9 am'},
+    {id: 2, task: 'Make bed'},
+    {id: 3, task: 'Make breakfast'},
+    {id: 4, task: 'Go for a run'},
+    {id: 5, task: 'Read Assignment'}
+
   ];
   return (
     <>
-	    <h1>To Watch List</h1>
+	    <h1>My To Do List</h1>
 	    <ul>
-        {tasks.map((task) => <Todo key={task.id} t={task.t} />)}
+        {tasks.map((tsk) => <List key={tsk.id} task={tsk.task} />)}
       </ul>
     </>
   );
 }
 
-ReactDOM.render(<Watch />, document.getElementById('root'));
-
+ReactDOM.render(<Task />, document.getElementById('root'));
